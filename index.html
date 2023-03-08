@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourdough</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+        }
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid sienna;
+            background: white;
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background: peachpuff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .theam-button {
+            font-size: 12px;
+            background: gray;
+            color: white;
+            padding: 5px 8px;
+        }
+        .theam-button:hover {
+            color: gray;
+            background: white;
+        }
+        .sourdough-intro-picture {
+            margin: 20px auto;
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+        .sourdough-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+        }
+        .grid img:hover {
+            transform: scale(2);
+        }
+
+        .dark {
+            background-image: linear-gradient(to right, #c1c161 0%, #c1c161 0%, #d4d4b1 100%);
+
+            color: white;
+        }
+        .dark .container {
+            background: rgba(255, 255, 255, 0.1);
+        } 
+        .dark a {
+            color: sienna;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+    <H1>🥖Sourdough🥖</H1>
+    <h2>My favorit hobby</h2>
+    <a href="https://en.wikipedia.org/wiki/Sourdough" target="_blank">
+    <img src="https://images.unsplash.com/photo-1609501887155-76a050aed8f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdXJkb3VnaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="" class="sourdough-intro-picture">
+    </a>
+    <div class="grid">
+    <img src="https://images.unsplash.com/photo-1620429196249-d524581e605f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c291cmRvdWdofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1615227233267-193d25d405f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNvdXJkb3VnaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1641394535668-e08ba69531aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc2fHxzb3VyZG91Z2h8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            alt="">
+     <img src="https://images.unsplash.com/photo-1627308595181-fa2b6f5f04e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNvdXJkb3VnaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">   
+            </div>
+
+    <p>Sourdough or sourdough bread is a bread made by the fermentation of dough using wild lactobacillaceae and yeast. Lactic
+acid from fermentation imparts a sour taste and improves keeping qualities.</p>
+<br>
+🤓 <a href="https://en.wikipedia.org/wiki/Sourdough">
+    <strong>Read on Wikipedia</strong>
+</a>
+    <button>Learn Sourdough baking</button>
+    </div>
+    <footer>Coded by Yue Ajioka</footer>
+    <script>
+        function changetheme() {
+            let body = document.querySelector("body");
+            
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+
+        let themebutton = document.querySelector(".theme-button");
+        themebutton.addEventListener("click", changetheme);
+    </script>
+    
+</body>
+</html>
